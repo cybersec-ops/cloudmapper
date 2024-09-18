@@ -1,0 +1,10 @@
+services:
+  cloudmapper:
+    container_name: cloudmapper
+    image: cloudmapper
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - AWS_DEFAULT_REGION=us-east-1
+    restart: unless-stopped
